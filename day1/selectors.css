@@ -1,0 +1,40 @@
+li:nth-child(even){
+    color:darkgray;
+}
+
+input[type="email"]{
+    color: rgb(10, 238, 60);
+}
+.card.featured{
+    color: aqua;
+}
+article > p{
+    color: coral;
+}
+h2 + p {
+    color: springgreen;
+}
+.card:hover{
+    color: blue;
+}
+#email:focus{
+    background-color: brown;
+}
+li:first-child:hover{
+    background-color: black !important;
+}
+li:last-child:hover{
+    background-color: rgb(255, 0, 0);
+}
+li:nth-child(3n+1):hover{
+    background-color: chartreuse;
+}
+article::before{
+    content: "<<";
+}
+article::after{
+    content: ">>";
+}
+a[href^="https://"]{
+    border: 1.6px solid black;
+}

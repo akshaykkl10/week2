@@ -1,0 +1,83 @@
+.div1{
+    background-color: aquamarine;
+    width: 200px;
+    height: 200px;
+}
+.div2{
+    background-image: url("https://picsum.photos/200/300");
+    background-size: contain;
+    width: 500px;
+    height: 500px;
+    background-position: center;
+    background-repeat:no-repeat;
+}
+
+.div3{
+    width: 200px;
+    height: 200px;
+    background:linear-gradient(
+        to right,
+        blue,
+        purple
+    );
+    border-style: solid;
+}
+
+.div4{
+    width: 200px;
+    height: 200px;
+    background:linear-gradient(
+        to right,
+        blue,
+        purple ,
+        transparent
+    );
+    border-radius: 50%;
+    border-style: groove;
+}
+.div5{
+    width: 200px;
+    height: 200px;
+    background:radial-gradient(
+        circle,
+        blue,
+        purple ,
+        transparent
+    );
+    border-style:double ;
+}
+.div6{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background:radial-gradient(
+        circle,
+        blue,
+        purple ,
+        yellow 50%,
+        transparent 70%
+    );
+    border-style: dashed ;
+}
+
+.div7{
+    width: 250px;
+    background-color: aquamarine;
+    padding: 15px;
+
+    border: 2px solid black;
+    border-radius: 9999px;
+    box-shadow: inset -10px -10px 10px black,
+    10px 10px 10px black;
+}
+
+.div8{
+    width: 250px;
+    background-color: aquamarine;
+    padding: 15px;
+
+    border: 2px solid black;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 20%;
+    box-shadow: 10px 10px 0 black;
+}

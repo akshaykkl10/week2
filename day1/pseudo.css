@@ -1,0 +1,55 @@
+nav a:hover {
+    background-color: aqua;
+}
+nav a:focus-visible {
+    outline: 2px solid red   ;
+}
+/* The focus pseudo class acts at every focus such as keyboard mouse etc.. but focus-visible acts only on keyboard focus */
+
+input[type='checkbox']{
+    appearance: none;
+}
+.check-label::before{
+    content: "";
+
+    display: inline-block;
+
+    width: 10px;
+    height: 10px;
+
+    border: 1px solid black;
+
+    /* align-items: center;
+    justify-content: center; 
+
+    margin-right: 8px; */
+}
+#check:checked + .check-label::before{
+    content: "✓";
+
+
+     outline: 1px solid black;
+}
+.steps {
+    counter-reset: step;
+}
+.steps li {
+    counter-increment: step;
+}
+.steps li::before {
+    content: counter(step);
+}
+
+.tooltip::after{
+    content: attr(data-tooltip);
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+
+
+
+}
+.tooltip:hover::after {
+    opacity: 1;
+    visibility:visible;
+}
