@@ -1,0 +1,142 @@
+.grow-container {
+    display: flex;
+    width: 600px;
+    border: 2px solid black;
+}
+
+.grow-item {
+    width: 50px;
+    padding: 20px;
+    border: 1px solid black;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.item1 {
+    flex-grow: 0;
+}
+
+.item2 {
+    flex-grow: 1;
+}
+
+.item3 {
+    flex-grow: 2;
+}
+
+.item4 {
+    flex-grow: 1;
+}
+
+.item5 {
+    flex-grow: 0;
+}
+.shrink-container {
+    display: flex;
+    width: 600px;
+    border: 2px solid black;
+}
+
+.shrink-item {
+    width: 200px;
+    padding: 20px;
+    border: 1px solid black;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.shrink-1 {
+    flex-shrink: 1;
+}
+
+.shrink-2 {
+    flex-shrink: 2;
+}
+
+.shrink-3 {
+    flex-shrink: 2;
+}
+
+.shrink-4 {
+    flex-shrink: 1;
+}
+
+.shrink-5 {
+    flex-shrink: 0;
+}
+
+
+.basis-container {
+    display: flex;
+    width: 800px;
+    border: 2px solid black;
+    flex-direction: row;
+}
+
+.basis-item {
+    border: 1px solid black;
+    padding: 20px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.basis-zero {
+    flex-basis: 0;
+}
+
+.basis-auto {
+    width: 150px;
+    flex-basis: auto;
+}
+
+.basis-200 {
+    flex-basis: 200px;
+}
+
+.basis-third {
+    flex-basis: 33.333%;
+}
+
+.order-container{
+    border: 2px solid black;
+    display: flex;
+    width: 600px;
+
+}
+.order-item {
+    border: 1px solid black;
+    padding: 20px;
+    margin: 2px;
+}
+.order1{
+    order: 5;
+}
+.order2{
+    order: 3;
+}
+.order3{
+    order: 1;
+}
+.order4{
+    order: 2;
+}
+.order5{
+    order: 4;
+}
+
+.align-container{
+    display: flex;
+    align-items: stretch;
+    border: 2px solid black;
+    width: 600px;
+    height: 400px;
+
+}
+.align-item{
+    border: 1px solid black;
+    padding: 20px;
+    margin: 2px;
+}
+.override{
+    align-self: flex-end;
+}

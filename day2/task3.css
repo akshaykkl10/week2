@@ -1,0 +1,60 @@
+header{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0);
+    background-color: aliceblue;
+}
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    margin-top: 0px;
+    padding: 2px;
+    border: 2px solid black;
+    background: linear-gradient(
+        to right,
+        black,
+        rgb(0, 140, 255)
+        
+    );
+    color: aliceblue;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex: 1;
+
+}
+nav>        a:focus-visible {
+    outline: 2px solid rgb(116, 111, 111);
+
+}
+nav>a:hover{
+    background: linear-gradient( 
+        120deg,
+        transparent,
+        rgb(215, 255, 35),
+        rgb(149, 255, 27),
+        transparent
+    );
+    color: rgb(0, 0, 0);
+    box-shadow: 0px 0px 30px gold; 
+}
+
+.hamburger{
+    display: none;
+}
+
+@media (max-width:768px) {
+    nav{
+        display: none;
+    }
+    .hamburger{
+        display: block;
+    }
+}

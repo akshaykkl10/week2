@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Form</title>
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+    <main>
+        <h1>Checkout Form</h1>
+        <h2>Delivery Address</h2>
+        <form>
+            <fieldset>
+                <legend>Fields marked * are required</legend>
+                <div class="form-row">
+                    <div class="form-field-row">
+
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" required> 
+                    </div>
+                    <div class="form-field-row">
+
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" required> 
+                    </div>
+                    
+                </div>
+                <div class="form-field">
+                    
+                    <label for="address-1" >Address Line 1</label>
+                    <input type="text" id="address-1" required > <sup>*</sup>
+                </div>
+                <div class="form-field">
+                    
+                    <label for="address-2">Address Line 2</label>
+                    <input type="text" id="address-2">
+                </div>
+                <div class="form-field">
+                    
+                    <label for="city">City</label>
+                    <input type="text" id="city" required > <sup>*</sup>
+                </div>
+                <div class="form-field">
+                    
+                    <label for="code">Post Code</label>
+                    <input type="text" id="code" inputmode="numeric" pattern="[0-9]{6}"  required > <sup>*</sup>
+                </div>
+                <div class="form-field">
+                    
+                    <label for="country-choice">Country</label>
+                    <input list="countries" id="country-choice"  required > <sup>*</sup>
+                </div>
+                <datalist id="countries">
+                    <option value="India"></option>
+                    <option value="USA"></option>
+                    <option value="Canada"></option>
+                    <option value="Brazil"></option>
+                    <option value="Pakistan"></option>
+                    <option value="China"></option>
+                    <option value="Myanmmar"></option>
+                    <option value="Nepal"></option>
+                    <option value="Sri Lanka"></option>
+                    <option value="Japan"></option>
+                    <option value="South Korea"></option>
+                    <option value="France"></option>
+                    <option value="Belgium"></option>
+                    <option value="Portugal"></option>
+                    <option value="England"></option>
+                    <option value="Alaska"></option>
+                    <option value="Egypt"></option>
+                    <option value="Morocco"></option>
+                    <option value="Spain"></option>
+                    <option value="Italy"></option>
+                </datalist>
+
+
+            </fieldset>
+            <fieldset>
+                <legend>Payment Details</legend>
+                <label for="card-number">Card Number</label>
+                <input type="text" id="card-number" required  maxlength="16"  pattern="[0-9]{16}" inputmode="numeric"> 
+                <label for="month">Expiry Month</label>
+                <input type="month" id="month" required > 
+                <label for="cvv">CVV</label>
+                <input type="password" id="cvv" maxlength="4" aria-describedby="cvv-help" required > 
+                <small class="error-message">Enter a valid CVV</small>
+                <p id="cvv-help">3 or 4 digits on the back of your card</p>
+            </fieldset>
+            <label for="notes">Order Notes</label>
+            <textarea id="notes" maxlength="500"></textarea>
+            <div class="form-buttons">
+                <button type="submit">Submit</button>
+                <button type="button">Cancel</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>

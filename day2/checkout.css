@@ -1,0 +1,76 @@
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.form-field {
+    display: flex;
+    flex-direction:row ;
+
+}
+.form-field label {
+    flex: 0 0 180px
+}
+.form-field input {
+    flex: 1;
+}
+.form-row {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: stretch;
+    gap: 1rem;
+}
+.form-field-row {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex: 1;
+    gap: 1rem;
+}
+@media (max-width:600px) {
+    .form-field{
+        flex-direction: column;
+
+    }
+    .form-row{
+        
+        flex-direction: column;
+        justify-content: space-around;
+
+    }
+    .form-field label {
+        flex: none;
+    }
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+.form-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+input:focus-visible,
+textarea:focus-visible {
+    outline: 1px solid blue;
+}
+button[type="submit"]:hover,
+button[type="button"]:hover{
+    background-color: darkslateblue;
+    color: aliceblue;
+}
+
+input:user-invalid{
+    outline: 1px solid red;
+}
+.error-message {
+    color: red;
+    display: none;
+}
+#cvv:user-invalid + .error-message {
+    display: block;
+}
