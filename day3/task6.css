@@ -1,0 +1,84 @@
+.calendar {
+    display: grid;
+    grid-template-columns:100px 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+    border: 1px solid black;
+}
+
+.week, 
+.weekday {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+    padding: 1rem;
+    border: 1px solid black;
+}
+.weeknumber,
+.empty-day,
+.day {
+    padding: 2rem;
+    font-size: xx-large;
+    border: 1px solid black;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.holiday {
+    background-color: rgb(247, 96, 96);
+}
+.firstday {
+    grid-column: 8;
+}
+.weeknumber {
+    grid-column: 1;
+}
+.today::before {
+    content:" ";
+    position: absolute;
+    top: 0.5rem;
+    left: 4rem;
+    align-self: center;
+    justify-self: center;
+    height: 5rem;
+    width: 5rem;
+    border: 1px solid black;
+    border-radius: 50%;
+
+    
+}
+@media (max-width:480px) {
+    .calendar {
+        display: flex;
+        flex-direction: column;
+    }
+    .week,
+    .weekday,
+    .weeknumber {
+        display: none;
+    }
+    .day{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+
+    .today::before {
+        content:" ";
+        position:absolute;
+        justify-content: start;
+        align-self: center;
+        flex: 1;
+        height: 5rem;
+        width: 5rem;
+        top: 50%;
+        left: 90%;
+        border: 1px solid black;
+        border-radius: 50%;
+        
+    }
+    .day::after {
+        content: attr(data-day);
+
+        font-size: 1rem;
+        font-weight: bold;
+    
+}
+}

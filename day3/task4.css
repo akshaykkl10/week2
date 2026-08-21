@@ -1,0 +1,32 @@
+.product-page {
+    display: grid;
+    border: 1px solid;
+    gap: 0.5rem;
+}
+.product{
+    border: 1px solid;
+    padding: 20px;
+}
+.grid,
+.span{
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+}
+.autofill{
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+}
+
+.autofit{
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr))
+}
+
+.span .product:last-child{
+    grid-column: 1 / -1;
+}
+.span2{
+    grid-template: auto auto auto auto / auto auto auto auto ;
+    grid-auto-flow: dense;
+}
+.featured {
+    grid-row: span 2;
+    grid-column: span 2;
+}

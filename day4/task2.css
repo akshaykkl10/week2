@@ -1,0 +1,52 @@
+html {
+    font-size: 62.5%
+}
+h1 {
+  font-size: clamp(2.4rem, 5vw + 1rem, 5.6rem);  
+}
+h2 {
+    font-size: clamp(2.4rem, 5vw + 0.8rem, 5.6rem);
+}
+h3 {
+    font-size: clamp(2.4rem, 5vw + 0.6rem, 5.6rem);
+}
+h4 {
+    font-size: clamp(2.4rem, 5vw + 0.4rem, 5.6rem);
+}
+h5 {
+    font-size: clamp(2.4rem, 5vw + 0.2rem, 5.6rem);
+}
+h6 {
+    font-size: clamp(2.4rem, 5vw, 5.6rem);
+}
+p {
+    font-size: clamp(1.4rem, 3vw, 3.6rem);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(1rem, 5vw + 1.5rem, 5rem);
+    container-type: inline-size;
+    container-name: cards;
+
+
+}
+.card {
+    border: 1px dashed gray;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+
+@container cards (min-width: 500px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    .card {
+        background-color: lightgreen;
+        flex-direction: row;
+        gap: 30px;
+    }
+}

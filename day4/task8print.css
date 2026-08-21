@@ -1,0 +1,32 @@
+article p{
+    box-shadow: none;
+}
+nav,
+.mode {
+    display: none;
+}
+a::after{
+    content: " "attr(href);
+}
+
+.accordion-content {
+    transition: none;
+    max-height: max-content;
+}
+input[type=radio], label {
+    display: none;
+}
+.panel1,
+.panel2,
+.panel4,
+.panel3 {
+    display: block;
+}
+footer{
+    break-inside: avoid;
+}
+
+.panels {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
